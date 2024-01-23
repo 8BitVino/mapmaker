@@ -63,14 +63,18 @@ example.map - Example map
 
 [Robogeek42](https://github.com/robogeek42) - for Agon-sped sprite editor and testing MapMaker
 
+
 ### Contact details
 Please report any bugs to 8bitvino at gmail.com
+
 
 ### Interested in coding for AgonLight/Console8? 
 Find us on the Discord channel [Agon Programmer](https://discord.com/channels/1080130527908069467/1096246023799722014)
 
+
 ### Release version information
 v1.0 Inital code release 24/1/2024
+
 
 ### Screenshots
 <a href="loading.png" target="blank"><img align="center" src="https://github.com/8BitVino/mapmaker/blob/main/loading.png" height="100" /></a>
