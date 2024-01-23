@@ -25,12 +25,11 @@ Arrow keys: Move cursor
 ## DIY tiles
 The default behaviour is for the tileset is loading the RGBA tiles 0.rgb to 18.rgb from the <tiles> subdirectory.  
 
-To use a custom tileset, create your bitmaps in [Sped 1.02](https://github.com/robogeek42/agon_sped/)
-1) Ensure that one pallete colour is made a transparent (alpha) tile (T) 
-2) Save in format (2)RGBA8, no multiple frames. 
-3) Create a folder in mapmaker directory <yourdirectory> and place your files inside labelled 1.rgb to 18.rgb.
-4) Copy the 0.rgb from tiles directory to <yourdirectory> (this is the cursor sprite with transparency needed for editor)
-5) Either a) Edit mapmaker.bas and change tilespack$="<yourdirectory>"
+To use a custom tileset, create your bitmaps in [Sped 1.02](https://github.com/robogeek42/agon_sped/) 
+1) Save in format (2)RGBA8, no multiple frames. 
+2) Create a folder in mapmaker directory <yourdirectory> and place your files inside labelled 1.rgb to 18.rgb.
+3) Copy the 0.rgb from tiles directory to <yourdirectory> (this is the cursor sprite with transparency needed for editor)
+4) Either a) Edit mapmaker.bas and change tilespack$="<yourdirectory>"
           b) In mapmaker select Z to load a zone and enter <yourdirectory>
 
 ## Making Your Own Game
