@@ -47,7 +47,7 @@ mapmaker.bas - The Map Maker
 
 game.bas - Stripped down version of mapmaker for creating your own games
 
-tiles\0-18.rgb - Default 16x16 bitmaps created in Sped. 
+tiles\0-18.rgb - Default 16x16 bitmaps created in Sped (required folder and files for mapmaker.bas and game.bas to load)
 
 example.map - Example map
 
