@@ -66,7 +66,6 @@ https://discord.com/channels/1080130527908069467/1096246023799722014
 v1.0 Inital code release 24/1/2024
 
 ### Screenshots
-<a href="loading.png" target="blank"><img align="center" src="https://github.com/8BitVino/mapmaker/blob/main/loading.png
-" height="100" /></a>
+<a href="loading.png" target="blank"><img align="center" src="https://github.com/8BitVino/mapmaker/blob/main/loading.png" height="100" /></a>
 <a href="random.png" target="blank"><img align="center" src="https://github.com/8BitVino/mapmaker/blob/main/random.png" height="100" /></a>
 <a href="example.png" target="blank"><img align="center" src="https://github.com/8BitVino/mapmaker/blob/main/example.png" height="100" /></a>
