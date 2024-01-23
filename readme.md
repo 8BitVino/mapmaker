@@ -10,11 +10,11 @@ MapMaker is a map-making utility designed for the AgonLight and Console8 systems
 
 ## Editor controls
 Arrow keys: Move cursor
-** L **: Load map (try the example.map provided)
-** S **: Save map (no automatic extensions applied)
-** N **: Create a random map from the existing tileset
-** Z **: Sticky Pen toggle on/off. Default off. When you move it will continue painting with the last tile you layed.
-** X **: Exit the editor (ESC key intentionally won't stop the editor!)
+**L** : Load map (try the example.map provided)
+**S** : Save map (no automatic extensions applied)
+**N** : Create a random map from the existing tileset
+**Z** : Sticky Pen toggle on/off. Default off. When you move it will continue painting with the last tile you layed.
+**X** : Exit the editor (ESC key intentionally won't stop the editor!)
 
 
 ## DIY tiles
@@ -31,9 +31,9 @@ To use a custom tileset, create your bitmaps in [Sped 1.02](https://github.com/r
 ## Making Your Own Game
 Included is game.bas, a cut-down version of the editor, serving as a template to create your own game. 
 
-The game.bas will load the example.map file. To use your own map simply change the MYMAP$ variable with your custom map's name. 
+The **game.bas** will load the example.map file. To use your own map simply change the MYMAP$ variable with your custom map's name. 
 
-The default tile set can be specified by changing tilespack$ variable to match the directory you have you tiles numbered 0.rgb - 18.rgb
+The default tile set can be specified by changing **tilespack$** variable to match the directory you have you tiles numbered 0.rgb - 18.rgb
 
 As a courtesy, if you create content using the map editor and or game.bas, please leave a credit to 8BitVino in your code.
 
@@ -51,15 +51,14 @@ example.map - Example map
 - Joystick support
 
 ### Thank you:
-The 8bit Noob - https://github.com/The-8bit-Noob - for sprite demos and testing MapMaker
-Robogeek42 - https://github.com/robogeek42 - for agon-sped sprite editor and testing MapMaker
+[The 8bit Noob](https://github.com/The-8bit-Noob) - for sprite demos and testing MapMaker
+[Robogeek42](https://github.com/robogeek42) - for Agon-sped sprite editor and testing MapMaker
 
 ### Contact details
 Please report any bugs to 8bitvino@gmail.com
 
 ### Interested in coding for AgonLight/Console8? 
-Find us on discord channel Agon Programmer / #sprite-editors
-https://discord.com/channels/1080130527908069467/1096246023799722014
+Find us on the Discord channel [Agon Programmer](https://discord.com/channels/1080130527908069467/1096246023799722014)
 
 ### Release version information
 v1.0 Inital code release 24/1/2024
