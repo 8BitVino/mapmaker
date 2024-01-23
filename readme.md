@@ -17,7 +17,7 @@ Arrow keys: Move cursor
 
 **N** : Create a random map from the existing tileset
 
-**Z** : Sticky Pen toggle on/off. Default off. When you move it will continue painting with the last tile you layed.
+**Z** : Sticky Pen toggle on/off. Default off. When you move it will continue painting with the last tile you laid.
 
 **X** : Exit the editor (ESC key intentionally won't stop the editor!)
 
