@@ -1,7 +1,7 @@
 # MapMaker
 
 ## Background
-MapMaker is a map-making utility designed for the AgonLight and Console8 systems, written entirely in BBC Basic with MODE8. Mode 8 was chosen to showcase 16x16 bitmaps with 64-color support. The release playfield is 15x15 wide - but future versions of editor will allow bigger and smaller maps. Create your own maps in the **mapmaker.bas** editor and then use the **game.bas** template to create your own game.
+MapMaker is a map-making utility designed for the AgonLight and Console8 systems, written entirely in BBC Basic with MODE8. Mode 8 was chosen to showcase 16x16 bitmaps with 64-color support. The release (V1.0) playfield is 15x15 wide - but future versions of editor will allow bigger and smaller maps. Create your own maps in the **mapmaker.bas** editor and then use the **game.bas** template to create your own game.
 
 ## System Requirements
 - Tested on (pre-compiled) **Fab Agon Emulator 0.9.12**
@@ -60,6 +60,7 @@ example.map - Example map
 
 ### Thank you:
 [The 8bit Noob](https://github.com/The-8bit-Noob) - for sprite demos and testing MapMaker
+
 [Robogeek42](https://github.com/robogeek42) - for Agon-sped sprite editor and testing MapMaker
 
 ### Contact details
