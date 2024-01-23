@@ -1,5 +1,4 @@
 # MapMaker - v1.0
-https://github.com/8BitVino/mapmaker
 
 ## Background
 MapMaker is a map-making utility designed for the AgonLight and Console8 systems, written entirely in BBC Basic with MODE8. Mode 8 was chosen to showcase 16x16 bitmaps with 64-color support. The release playfield is 15x15 wide - but future versions of editor will allow bigger and smaller maps.
@@ -63,5 +62,7 @@ Please report any bugs to 8bitvino@gmail.com
 Find us on discord channel Agon Programmer / #sprite-editors
 https://discord.com/channels/1080130527908069467/1096246023799722014
 
-###Release version information
+### Release version information
 v1.0 Inital code release 24/1/2024
+
+### Screenshots
