@@ -1,5 +1,5 @@
    10 REM Game example for MapMaker. Make, Modify, Load and Save a bitmap game field
-   20 REM by 8BitVino. PRE-RELEASE 1
+   20 REM by 8BitVino. v1.0 (Release version)
    30 REM https://github.com/8BitVino/mapmaker
    40 REM with code snippets from The-8bit-Noob & robogeek42
    50 MB%=&40000 : REM MEMORY BANK &40000.

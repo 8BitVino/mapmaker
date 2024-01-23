@@ -13,7 +13,7 @@
   130 VDU 23,1,0 : REM DISABLE CURSOR.
   140 PROCsetupChars
   150 FOR T=0 TO 148:C.RND(32):P."MAPMAKER";:NEXT:PROCborder
-  160 C.15:P.TAB(7,13);"M A P   M A K E R":C.1:P.TAB(10,14);"PRE-RELEASE 2"
+  160 C.15:P.TAB(7,13);"M A P   M A K E R":C.6:P.TAB(10,14);"Version 1.0"
   170 C.15:P.TAB(6,16);"Reticulating splines"
   180 PROCgreenstart
   190 PROCreload
