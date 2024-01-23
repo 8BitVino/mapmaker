@@ -44,8 +44,11 @@ As a courtesy, if you create content using the map editor and or game.bas, pleas
 
 ## File structure
 mapmaker.bas - Map Maker
+
 game.bas - Stripped down version of mapmaker for creating your own games
+
 tiles\0-18.rgb - Default 16x16 bitmaps created in Sped. 
+
 example.map - Example map
 
 ## Future enhancements planned
