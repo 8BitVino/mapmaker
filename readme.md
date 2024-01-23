@@ -31,7 +31,6 @@ To use a custom tileset, create your bitmaps in [Sped 1.02](https://github.com/r
 3) Copy the 0.rgb from tiles directory to <yourdirectory> (this is the cursor sprite with transparency needed for editor)
 4) Either
              a) Edit mapmaker.bas and change tilespack$="<yourdirectory>"
-   
              b) In mapmaker select Z to load a zone and enter <yourdirectory>
 
 
