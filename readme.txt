@@ -1,15 +1,15 @@
-MapMaker - v1.0
+<h1>MapMaker - v1.0</h1>
 https://github.com/8BitVino/mapmaker
 
-Background
+<h2>Background</h2>
 MapMaker is a map-making utility designed for the AgonLight and Console8 systems, written entirely in BBC Basic with MODE8. Mode 8 was chosen to showcase 16x16 bitmaps with 64-color support. The release playfield is 15x15 wide - but future versions of editor will allow bigger and smaller maps.
 
-System Requirements
-- Tested on (pre-compiled) Fab Agon Emulator 0.9.12
-- Tested on AgonLight2 with VDP/MOS 1.04 
-- *Should* work on Console 8 VDP 2.3.0
+<h2>System Requirements</h2>
+- Tested on (pre-compiled) **Fab Agon Emulator 0.9.12**
+- Tested on **AgonLight2** with VDP/MOS 1.04 
+- *Should* work on **Console 8** VDP 2.3.0
 
-Editor controls
+<h2>Editor controls</h2>
 Arrow keys: Move cursor
 L: Load map (try the example.map provided)
 S: Save map (no automatic extensions applied)
@@ -18,7 +18,7 @@ Z: Sticky Pen toggle on/off. Default off. When you move it will continue paintin
 X: Exit the editor (ESC key intentionally won't stop the editor!)
 
 
-DIY tiles
+<h2>DIY tiles</h2>
 The default behaviour is for the tileset is loading the RGBA tiles 0.rgb to 18.rgb from the <tiles> subdirectory.  
 
 To use a custom tileset, create it with sped 1.02
@@ -30,7 +30,7 @@ chai(https://github.com/robogeek42/agon_sped/).
 5) Either a) Edit mapmaker.bas and change tilespack$="<yourdirectory>"
           b) In mapmaker select Z to load a zone and enter <yourdirectory>
 
-Making Your Own Game
+<h2>Making Your Own Game</h2>
 Included is game.bas, a cut-down version of the editor, serving as a template to create your own game. 
 
 The game.bas will load the example.map file. To use your own map simply change the MYMAP$ variable with your custom map's name. 
