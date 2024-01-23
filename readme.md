@@ -10,10 +10,15 @@ MapMaker is a map-making utility designed for the AgonLight and Console8 systems
 
 ## Editor controls
 Arrow keys: Move cursor
+
 **L** : Load map (try the example.map provided)
+
 **S** : Save map (no automatic extensions applied)
+
 **N** : Create a random map from the existing tileset
+
 **Z** : Sticky Pen toggle on/off. Default off. When you move it will continue painting with the last tile you layed.
+
 **X** : Exit the editor (ESC key intentionally won't stop the editor!)
 
 
