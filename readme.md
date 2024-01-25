@@ -45,6 +45,9 @@ The default tile set can be specified by changing **tilespack$** variable to mat
 
 As a courtesy, if you create content using the map editor and or game.bas, please leave a credit to 8BitVino in your code.
 
+## Tutorial
+The 8bit Noob has created a great [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
+
 ## File structure
 mapmaker.bas - The Map Maker
 
