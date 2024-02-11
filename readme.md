@@ -76,7 +76,7 @@ maptool.bas - Maptool utility
 
 **dungeon.bas** - Example base game "Dungeon Crawler" (also requires directories /0-5, dungeon.map & dungeon2.map) 
 
-**0\** - Special directory containing black tile (1.rgb) and the cursor (0.rgb)
+0\ - Special directory containing black tile (1.rgb) and the cursor (0.rgb)
 
 **1 to 5\0-9.rgb** - Default 16x16 bitmaps created in Sped. 
 
