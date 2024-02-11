@@ -61,9 +61,6 @@ An additional basic program called "maptool.bas" has been included. The purpose 
 ## Making Your Own Game
 Included is dungeon.bas, "Dungeon Crawler". This is a cut-down version of the editor code serving as a template to create your own game. 
 
-## Tutorial
-(old version 1.0) The 8bit Noob has created a [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
-
 ## File structure
 mapmaker.bas - Map Maker
 
@@ -94,6 +91,10 @@ The custompack$ and customslot% are optional and will be added to the save map f
 [The 8bit Noob](https://github.com/The-8bit-Noob) - for sprite demos and testing MapMaker
 
 [Robogeek42](https://github.com/robogeek42) - for Agon-sped sprite editor and testing MapMaker
+
+## Tutorial
+(Deprecated) The 8bit Noob has created a [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
+
 
 
 ### Contact details
