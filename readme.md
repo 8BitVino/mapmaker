@@ -34,14 +34,19 @@ Arrow keys: Move cursor
  
 ## Tile pack layout
 Mapmaker supports large number of tiles using concept of banks(tilepacks). 
+
 A bank is a collection of 10 bitmaps labelled 0.rgb to 9.rgb in a subdirectory from the base mapmaker.bas directory. 
+
 There is an additional "system" bank 0 (directory 0\ ) that is reserved for special tiles being transparency selector bitmap and black tile.
 
 The base git package includes 5 useable banks, ie: directories 1 to 5. 
 
 There are several different methods to load your own tilepacks.
+
 1) Replace the current .rgb files in directories 1-5
+
 2) Add additional directories sequentially from 6 onwards and when starting select a new total number
+
 3) Use the (Z)one tool to load in your own custom tilesets replacing the existing tilesets and save the mapfile. *Note this method needs further consideration for your game file to consider custom load files.
 
 As tile packs bitmaps are loaded into higher memory of the ESP32 (Memory bank &40000) you can load large number of tile packs however the tool is currently limited to 99 zones = 990 custom tiles!
@@ -51,8 +56,11 @@ Mapmaker relies on tiles in RGBA8 format.
 
 Create new tiles with sped 1.02 (https://github.com/robogeek42/agon_sped/) 
 1) Ensure that one pallete colour is made a transparent (alpha) tile (T) - it doesn't acutally need to be used. 
+
 2) Save in format (2)RGBA8, no multiple frames. 
+
 3) Create a folder in mapmaker directory <yourdirectory> and place your files inside labelled 0.rgb to 9.rgb.
+
 4) See tile pack layout information on how to import 
 
 ## Maptool utility
@@ -74,12 +82,19 @@ dungeon.bas - Example base game "Dungeon Crawler" (also requires directories /0-
 
 ## Map file format
 When saving a map the following is the technical format of the saved files
+
 X% - Defines the number of tiles wide (15 total this release)
+
 Y% - Defines the number of tiles depth (15 total this release)
+
 decks% - Define the total number of banks (including custom) in use
+
 custom% - Defines the number of custom banks in use
+
 array(X%,Y%)- Contains the tile values for the 14x14 array 
+
 custompack$ - Defines the custom directory to load tiles from
+
 customslot% - Defines the assigned slot to load the custompack into
 
 The custompack$ and customslot% are optional and will be added to the save map file dependant on how many entries are defined in the custom%
