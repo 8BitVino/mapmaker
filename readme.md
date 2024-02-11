@@ -108,7 +108,7 @@ The custompack$ and customslot% are optional and will be added to the save map f
 [Robogeek42](https://github.com/robogeek42) - for Agon-sped sprite editor and testing MapMaker
 
 ## Tutorial
-(Deprecated) The 8bit Noob has created a [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
+(*Deprecated*) The 8bit Noob has created a [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
 
 
 
