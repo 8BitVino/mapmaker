@@ -1,7 +1,7 @@
 # MapMaker
 
 ## Background
-MapMaker is a map-making utility designed for the AgonLight 2 and Console8 systems, written entirely in BBC Basic with VDP MODE 8. Mode 8 was chosen to showcase large 16x16 bitmaps with 64-color support. The release (V1.0) playfield is 15x15 wide - but future versions of editor will allow bigger and smaller maps. Create your own maps in the **mapmaker.bas** editor and then use the **game.bas** template to create your own game.
+MapMaker is a map-making utility designed for the AgonLight and Console8 systems, written entirely in BBC Basic with MODE8. Mode 8 was chosen to showcase 16x16 bitmaps with 64-color support. The release playfield is 15x15 wide - but future versions of editor will allow bigger and smaller maps.
 
 ## System Requirements
 - Tested on (pre-compiled) **Fab Agon Emulator 0.9.12**
@@ -11,58 +11,84 @@ MapMaker is a map-making utility designed for the AgonLight 2 and Console8 syste
 ## Editor controls
 Arrow keys: Move cursor
 
-**L** : Load map (try loading the example.map provided)
+**L** : (L)oad map (try dungeon.map)
 
-**S** : Save map (no automatic extensions applied)
+**V** : Sa(V)e map (as is no automatic extensions applied)
 
-**N** : Create a random map from the existing tileset
+**X** : e(X)it the editor (ESC key intentionally won't stop the editor!)
 
-**Z** : Sticky Pen toggle on/off. Default off. When you move it will continue painting with the last tile you laid.
+**N** : ra(N)domly create a map from the existing tilesets
 
-**X** : Exit the editor (ESC key intentionally won't stop the editor!)
+**K** : stic(K)y Pen toggle on/off. Default off. Continue painting with the last tile you layed.
 
+**D** : (D)irs shows the current loaded custom folders
 
-## DIY tiles
-The default behaviour is for the tileset is loading the RGBA tiles 0.rgb to 18.rgb from the <tiles> subdirectory.  
+**C** : (C)ls clears current screen with black tiles
 
-To use a custom tileset, create your bitmaps in [Sped 1.02](https://github.com/robogeek42/agon_sped/) 
-1) Save in format (2)RGBA8, no multiple frames. 
-2) Create a folder in mapmaker directory <yourdirectory> and place your files inside labelled 1.rgb to 18.rgb.
-3) Copy the 0.rgb from tiles directory to <yourdirectory> (this is the cursor sprite with transparency needed for editor)
-4) Either:
-   
-   a. Edit mapmaker.bas and change tilespack$=_"yourdirectory"_
+**?** : Help
 
-   b. OR In mapmaker select Z to load a zone and enter _yourdirectory_
+**[** : Scrolls through available tilesets on left bank
 
+**]** : Scrolls through available tilesets on right bank
+
+ 
+## Tile pack layout
+Mapmaker supports large number of tiles using concept of banks(tilepacks). 
+A bank is a collection of 10 bitmaps labelled 0.rgb to 9.rgb in a subdirectory from the base mapmaker.bas directory. 
+There is an additional "system" bank 0 (directory 0\ ) that is reserved for special tiles being transparency selector bitmap and black tile.
+
+The base git package includes 5 useable banks, ie: directories 1 to 5. 
+
+There are several different methods to load your own tilepacks.
+1) Replace the current .rgb files in directories 1-5
+2) Add additional directories sequentially from 6 onwards and when starting select a new total number
+3) Use the (Z)one tool to load in your own custom tilesets replacing the existing tilesets and save the mapfile. *Note this method needs further consideration for your game file to consider custom load files.
+
+As tile packs bitmaps are loaded into higher memory of the ESP32 (Memory bank &40000) you can load large number of tile packs however the tool is currently limited to 99 zones = 990 custom tiles!
+
+## Making RGB tiles
+Mapmaker relies on tiles in RGBA8 format. 
+
+Create new tiles with sped 1.02 (https://github.com/robogeek42/agon_sped/) 
+1) Ensure that one pallete colour is made a transparent (alpha) tile (T) - it doesn't acutally need to be used. 
+2) Save in format (2)RGBA8, no multiple frames. 
+3) Create a folder in mapmaker directory <yourdirectory> and place your files inside labelled 0.rgb to 9.rgb.
+4) See tile pack layout information on how to import 
+
+## Maptool utility
+An additional basic program called "maptool.bas" has been included. The purpose of this utility is to interigate the saved maps and provide basic information useful for directories in use and mapsizes. 
 
 ## Making Your Own Game
-Included is game.bas, a cut-down version of the editor, serving as a template to create your own game. 
-
-The **game.bas** will load the example.map file. To use your own map simply change the MYMAP$ variable with your custom map's name. 
-
-The default tile set can be specified by changing **tilespack$** variable to match the directory you have you tiles numbered 0.rgb - 18.rgb
-
-As a courtesy, if you create content using the map editor and or game.bas, please leave a credit to 8BitVino in your code.
+Included is dungeon.bas, "Dungeon Crawler". This is a cut-down version of the editor code serving as a template to create your own game. 
 
 ## Tutorial
-The 8bit Noob has created a great [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
+(old version 1.0) The 8bit Noob has created a [video tutorial](https://youtu.be/1-fgj9UJj9c?si=Hou5eBpbFkzGQucr)
 
 ## File structure
-mapmaker.bas - The Map Maker
+mapmaker.bas - Map Maker
 
-game.bas - Stripped down version of mapmaker for creating your own games
+maptool.bas - Maptool utility 
 
-tiles\0-18.rgb - Default 16x16 bitmaps created in Sped (required folder and files for mapmaker.bas and game.bas to load)
+dungeon.bas - Example base game "Dungeon Crawler" (also requires directories /0-5, dungeon.map & dungeon2.map) 
 
-example.map - Example map
+0\ - Special directory containing black tile (1.rgb) and the cursor (0.rgb)
+
+1 to 5\0-9.rgb - Default 16x16 bitmaps created in Sped. 
+
+## Map file format
+When saving a map the following is the technical format of the saved files
+X% - Defines the number of tiles wide (15 total this release)
+Y% - Defines the number of tiles depth (15 total this release)
+decks% - Define the total number of banks (including custom) in use
+custom% - Defines the number of custom banks in use
+array(X%,Y%)- Contains the tile values for the 14x14 array 
+custompack$ - Defines the custom directory to load tiles from
+customslot% - Defines the assigned slot to load the custompack into
+
+The custompack$ and customslot% are optional and will be added to the save map file dependant on how many entries are defined in the custom%
 
 ## Future enhancements planned
 - Larger and smaller map support
-- Selectable number of tiles per map
-- Greater overall available tiles (36)
-- Flood fill
-- Joystick support
 
 ### Thank you:
 [The 8bit Noob](https://github.com/The-8bit-Noob) - for sprite demos and testing MapMaker
@@ -80,7 +106,7 @@ Find us on the Discord channel [Agon Programmer](https://discord.com/channels/10
 
 ### Release version information
 v1.0 Inital code release 24/1/2024
-
+v1.1 Released 11/2/2024
 
 ### Screenshots
 <a href="loading.png" target="blank"><img align="center" src="https://github.com/8BitVino/mapmaker/blob/main/loading.png" height="100" /></a>
