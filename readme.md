@@ -74,30 +74,30 @@ mapmaker.bas - Map Maker
 
 maptool.bas - Maptool utility 
 
-dungeon.bas - Example base game "Dungeon Crawler" (also requires directories /0-5, dungeon.map & dungeon2.map) 
+**dungeon.bas** - Example base game "Dungeon Crawler" (also requires directories /0-5, dungeon.map & dungeon2.map) 
 
-0\ - Special directory containing black tile (1.rgb) and the cursor (0.rgb)
+**0\** - Special directory containing black tile (1.rgb) and the cursor (0.rgb)
 
-1 to 5\0-9.rgb - Default 16x16 bitmaps created in Sped. 
+**1 to 5\0-9.rgb** - Default 16x16 bitmaps created in Sped. 
 
 ## Map file format
 When saving a map the following is the technical format of the saved files
 
-X% - Defines the number of tiles wide (15 total this release)
+**X%** - Defines the number of tiles wide (15 total this release)
 
-Y% - Defines the number of tiles depth (15 total this release)
+**Y%** - Defines the number of tiles depth (15 total this release)
 
-decks% - Define the total number of banks (including custom) in use
+**decks%** - Define the total number of banks (including custom) in use
 
-custom% - Defines the number of custom banks in use
+**custom%** - Defines the number of custom banks in use
 
-array(X%,Y%)- Contains the tile values for the 14x14 array 
+**array(X%,Y%)**- Contains the tile values for the 14x14 array 
 
-custompack$ - Defines the custom directory to load tiles from
+**custompack$** - Defines the custom directory to load tiles from
 
-customslot% - Defines the assigned slot to load the custompack into
+**customslot%** - Defines the assigned slot to load the custompack into
 
-The custompack$ and customslot% are optional and will be added to the save map file dependant on how many entries are defined in the custom%
+The **custompack$** and **customslot%** are optional and will be added to the save map file dependant on how many entries are defined in the custom%
 
 ## Future enhancements planned
 - Larger and smaller map support
@@ -122,6 +122,7 @@ Find us on the Discord channel [Agon Programmer](https://discord.com/channels/10
 
 ### Release version information
 v1.0 Inital code release 24/1/2024
+
 v1.1 Released 11/2/2024
 
 ### Screenshots
